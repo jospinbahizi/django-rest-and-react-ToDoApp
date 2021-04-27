@@ -124,8 +124,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'todo_frontend/build/static')
+    os.path.join(BASE_DIR, 'build/static')
 ]
 
 CORS_ORIGIN_WHITELIST = [
