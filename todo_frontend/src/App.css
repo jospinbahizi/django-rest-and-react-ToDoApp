@@ -5,14 +5,31 @@ body{
 h1, h2, h3, h4, h5, p, span, strike{
     font-family: 'Montserrat', sans-serif;
 }
+
+.app_name{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #4C9CC4;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.slogan{
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    color: #3C4244;
+    margin-bottom: 40px;
+}
   
 #task-container {
     max-width:600px;
     margin:0 auto;
     box-shadow: 0 100px 78px -46px rgba(0, 0, 0, 0.16);
     background-color: #fff;
-    margin-top:100px;
-    margin-bottom:100px;
+    margin-top:50px;
+    margin-bottom:50px;
     justify-content: space-around;
     align-items: flex-start;
 }
@@ -28,15 +45,15 @@ h1, h2, h3, h4, h5, p, span, strike{
 }
   
 #submit{
-    background-color: #00674b;
+    background-color: #045CA4;
     border-radius: 5px;
-    border:1px solid #00674b;
+    border:1px solid #045CA4;
     color: #fff;
 }
 
 #submit:hover{
-    background-color: #00853E; 
-    border:1px solid #00853E;
+    background-color: #103a4e; 
+    border:1px solid #103a4e; 
 }
   
 .flex-wrapper{

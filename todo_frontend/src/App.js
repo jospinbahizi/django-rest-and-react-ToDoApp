@@ -144,7 +144,7 @@ class App extends React.Component {
                 'Content-type': 'application/json',
                 'X-CSRFToken': csrftoken,
             },
-            body: JSON.stringify({'completed': task.completed, 'title': task.title})
+            body: JSON.stringify({ 'completed': task.completed, 'title': task.title })
         }).then(() => {
             this.fetchTasks()
         })
@@ -157,8 +157,12 @@ class App extends React.Component {
 
         return (
             <div className="container">
-                <div id="task-container">
 
+                <p className="app_name">Todo App</p>
+                <p className="slogan">make lists - look at lists - <strike>panic</strike> accomplish</p>
+
+                <div id="task-container">
+                    
                     <div id="form-wrapper">
                         <form onSubmit={this.handleSubmit} id="form">
                             <div className="flex-wrapper">
@@ -184,17 +188,21 @@ class App extends React.Component {
                                         {task.completed === false ? (
                                             <span>{task.title}</span>
                                         ) : (
-                                            <strike>{task.title}</strike>    
+                                            <strike>{task.title}</strike>
                                         )}
-                                        
+
                                     </div>
 
                                     <div style={{ flex: 1 }}>
-                                        <button onClick={() => self.startEdit(task)} className="btn btn-sm btn-outline-info">Edit</button>
+                                        <button onClick={() => self.startEdit(task)} className="btn btn-sm btn-outline-info">
+                                             Edit
+                                        </button>
                                     </div>
 
                                     <div style={{ flex: 1 }}>
-                                        <button onClick={() => self.deleteItem(task)} className="btn btn-sm btn-outline-danger">Delete</button>
+                                        <button onClick={() => self.deleteItem(task)} className="btn btn-sm btn-outline-danger">
+                                            Delete
+                                        </button>
                                     </div>
 
                                 </div>
