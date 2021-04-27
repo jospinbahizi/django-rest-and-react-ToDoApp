@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'itif^hl709f*1vt49tecedzn!ese=+4!r_dz$x(z3qq#b*4xex'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['djangorest-react-todo.herokuapp.com', '127.0.0.1']
 
@@ -60,7 +60,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'todo_frontend/build/')
+            os.path.join(BASE_DIR, 'build/')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,8 +124,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')
 ]
@@ -133,3 +131,4 @@ STATICFILES_DIRS = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000"
 ]
+
